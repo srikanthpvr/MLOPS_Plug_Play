@@ -1,0 +1,198 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="mlops-hld-diagram" name="MLOps-Suite-HLD-Architecture">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1680" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- TIER 1: FRONTEND CONSOLE -->
+        <mxCell id="tier_fe" value="TIER 1: MLOPS ENGINEER INTERACTIVE CONSOLE (REACT 19 + TYPESCRIPT + TAILWIND CSS)" style="swimlane;html=1;startSize=30;rounded=1;arcSize=6;fillColor=#f8fafc;strokeColor=#cbd5e1;fontFamily=Helvetica;fontSize=13;fontStyle=1;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="1580" height="200" as="geometry"/>
+        </mxCell>
+
+        <!-- FE 01: Data Hub -->
+        <mxCell id="fe_01" value="&lt;b&gt;Data Hub &amp;amp; Connector&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;Azure Blob, ADLS, DVC, CSV&lt;br/&gt;Schema &amp;amp; Baseline Drift Profiler&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=10;" vertex="1" parent="tier_fe">
+          <mxGeometry x="40" y="55" width="240" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_fe_01" value="01" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2563eb;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="tier_fe">
+          <mxGeometry x="30" y="45" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- FE 02: Model Lab -->
+        <mxCell id="fe_02" value="&lt;b&gt;Model Lab &amp;amp; Hyperparameters&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;LightGBM, XGBoost, PyTorch&lt;br/&gt;Interactive Sliders &amp;amp; SLA Config&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=10;" vertex="1" parent="tier_fe">
+          <mxGeometry x="350" y="55" width="250" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_fe_02" value="02" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2563eb;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="tier_fe">
+          <mxGeometry x="340" y="45" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- FE 03: Agent Canvas -->
+        <mxCell id="fe_03" value="&lt;b&gt;Agent Execution Canvas&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;Live StateGraph Visualizer&lt;br/&gt;HITL Deployment Approvals&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=10;" vertex="1" parent="tier_fe">
+          <mxGeometry x="670" y="55" width="250" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_fe_03" value="03" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#059669;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="tier_fe">
+          <mxGeometry x="660" y="45" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- FE 04: Observability Desk -->
+        <mxCell id="fe_04" value="&lt;b&gt;Observability &amp;amp; Drift Desk&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;Real-time Latency (p50/p95/p99)&lt;br/&gt;KS &amp;amp; PSI Drift, One-Click Retrain&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=10;" vertex="1" parent="tier_fe">
+          <mxGeometry x="990" y="55" width="260" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_fe_04" value="04" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d97706;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="tier_fe">
+          <mxGeometry x="980" y="45" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- FE 05: LangSmith Hub -->
+        <mxCell id="fe_05" value="&lt;b&gt;LangSmith Trace Hub&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;Run-level Trace Graphs&lt;br/&gt;Prompt &amp;amp; Token Telemetry Deep-Link&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=10;" vertex="1" parent="tier_fe">
+          <mxGeometry x="1310" y="55" width="230" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_fe_05" value="05" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#7c3aed;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="tier_fe">
+          <mxGeometry x="1300" y="45" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- TIER 2: BACKEND API GATEWAY -->
+        <mxCell id="tier_api" value="TIER 2: PLUG &amp;amp; PLAY BACKEND GATEWAY (FASTAPI + ASYNC ENGINE + WEBSOCKET BUS)" style="swimlane;html=1;startSize=30;rounded=1;arcSize=6;fillColor=#f1f5f9;strokeColor=#94a3b8;fontFamily=Helvetica;fontSize=13;fontStyle=1;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="50" y="280" width="1580" height="150" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="api_06" value="&lt;b&gt;FastAPI Asynchronous Gateway &amp;amp; Streaming Engine&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;REST Controllers (/api/data, /api/models, /api/observability) | WebSocket Real-time Log &amp;amp; State Streamer | Pydantic Schema Contracts&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#64748b;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;" vertex="1" parent="tier_api">
+          <mxGeometry x="40" y="45" width="1500" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_api_06" value="06" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2563eb;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="tier_api">
+          <mxGeometry x="30" y="35" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- TIER 3: LANGGRAPH MULTI-AGENT BUILD SUITE -->
+        <mxCell id="tier_agents" value="TIER 3: AUTONOMOUS MLOPS BUILD AGENT SUITE (LANGGRAPH MULTI-AGENT STATEGRAPH + LANGCHAIN TOOLS)" style="swimlane;html=1;startSize=30;rounded=1;arcSize=6;fillColor=#f8fafc;strokeColor=#cbd5e1;fontFamily=Helvetica;fontSize=13;fontStyle=1;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="50" y="470" width="1580" height="300" as="geometry"/>
+        </mxCell>
+
+        <!-- Supervisor Banner -->
+        <mxCell id="ag_07" value="&lt;b&gt;07. MLOps Supervisor &amp;amp; StateGraph Engine&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;Orchestrates state transitions across subagents, maintains checkpoint history, and pauses at HITL interrupt nodes for human sign-off&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2563eb;strokeWidth=1.5;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;" vertex="1" parent="tier_agents">
+          <mxGeometry x="40" y="45" width="1500" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_ag_07" value="07" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2563eb;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="tier_agents">
+          <mxGeometry x="30" y="35" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Agent 08: Data Sentinel -->
+        <mxCell id="ag_08" value="&lt;b&gt;Data Sentinel Agent&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;Schema assertion tests,&lt;br/&gt;Kolmogorov-Smirnov &amp;amp; PSI drift,&lt;br/&gt;Data quality score generator&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=10;" vertex="1" parent="tier_agents">
+          <mxGeometry x="40" y="125" width="240" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_ag_08" value="08" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2563eb;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="tier_agents">
+          <mxGeometry x="30" y="115" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Agent 09: Training & HP -->
+        <mxCell id="ag_09" value="&lt;b&gt;Training &amp;amp; HP Agent&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;Executes model training,&lt;br/&gt;Cross-validation &amp;amp; tuning,&lt;br/&gt;Artifact serialization (.pkl/.onnx)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=10;" vertex="1" parent="tier_agents">
+          <mxGeometry x="350" y="125" width="250" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_ag_09" value="09" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2563eb;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="tier_agents">
+          <mxGeometry x="340" y="115" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Agent 10: Eval Gate -->
+        <mxCell id="ag_10" value="&lt;b&gt;Eval Gate Agent&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;Challenger vs Champion eval,&lt;br/&gt;Regression assertion rules,&lt;br/&gt;p95 Latency SLA benchmark&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=10;" vertex="1" parent="tier_agents">
+          <mxGeometry x="670" y="125" width="250" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_ag_10" value="10" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#059669;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="tier_agents">
+          <mxGeometry x="660" y="115" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Agent 11: Security Sentinel -->
+        <mxCell id="ag_11" value="&lt;b&gt;AgentShield Sentinel&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;Zero-secret code verification,&lt;br/&gt;Azure Key Vault credential audit,&lt;br/&gt;Non-root container compliance&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=10;" vertex="1" parent="tier_agents">
+          <mxGeometry x="990" y="125" width="260" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_ag_11" value="11" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dc2626;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="tier_agents">
+          <mxGeometry x="980" y="115" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Agent 12: Packager & Deployer -->
+        <mxCell id="ag_12" value="&lt;b&gt;Packager &amp;amp; Deployer&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;ACR Container Image Build,&lt;br/&gt;Azure ML Model Registry push,&lt;br/&gt;ACA / AKS Blue-Green Switch&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=10;" vertex="1" parent="tier_agents">
+          <mxGeometry x="1310" y="125" width="230" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_ag_12" value="12" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d97706;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="tier_agents">
+          <mxGeometry x="1300" y="115" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Flow Connectors inside Agent Tier -->
+        <mxCell id="flow_08_09" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#2563eb;strokeWidth=2;" edge="1" parent="tier_agents" source="ag_08" target="ag_09">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="flow_09_10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#059669;strokeWidth=2;" edge="1" parent="tier_agents" source="ag_09" target="ag_10">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="flow_10_11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#dc2626;strokeWidth=2;" edge="1" parent="tier_agents" source="ag_10" target="ag_11">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="flow_11_12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#d97706;strokeWidth=2;" edge="1" parent="tier_agents" source="ag_11" target="ag_12">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Memory Saver Banner -->
+        <mxCell id="ag_checkpointer" value="&lt;b&gt;State Persistence &amp;amp; Interrupt Checkpointing&lt;/b&gt;: Thread ID State tracking, MemorySaver / SQLite checkpointing, and LangGraph interrupt() before Azure deployment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#94a3b8;fontFamily=Helvetica;fontSize=11;fontColor=#475569;dashed=1;" vertex="1" parent="tier_agents">
+          <mxGeometry x="40" y="240" width="1500" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- TIER 4: AZURE INFRASTRUCTURE -->
+        <mxCell id="tier_azure" value="TIER 4: MICROSOFT AZURE CLOUD INFRASTRUCTURE &amp;amp; ENTERPRISE OBSERVABILITY FABRIC" style="swimlane;html=1;startSize=30;rounded=1;arcSize=6;fillColor=#f1f5f9;strokeColor=#94a3b8;fontFamily=Helvetica;fontSize=13;fontStyle=1;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="50" y="810" width="1580" height="200" as="geometry"/>
+        </mxCell>
+
+        <!-- Az 13: Storage -->
+        <mxCell id="az_13" value="&lt;b&gt;Azure Blob / ADLS Gen2&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;DVC Remote Repository&lt;br/&gt;Dataset Versions &amp;amp; Artifacts&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Helvetica;fontSize=11;fontColor=#1e293b;" vertex="1" parent="tier_azure">
+          <mxGeometry x="40" y="60" width="240" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_az_13" value="13" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2563eb;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="tier_azure">
+          <mxGeometry x="30" y="50" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Az 14: Azure OpenAI -->
+        <mxCell id="az_14" value="&lt;b&gt;Azure OpenAI Service&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;Enterprise GPT-4o / mini&lt;br/&gt;Private VNet &amp;amp; Managed Identity&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Helvetica;fontSize=11;fontColor=#1e293b;" vertex="1" parent="tier_azure">
+          <mxGeometry x="350" y="60" width="250" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_az_14" value="14" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#059669;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="tier_azure">
+          <mxGeometry x="340" y="50" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Az 15: Compute -->
+        <mxCell id="az_15" value="&lt;b&gt;Azure Container Apps / ACR&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;Serverless Serving &amp;amp; AKS Pool&lt;br/&gt;Azure ML Model Registry v2&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontFamily=Helvetica;fontSize=11;fontColor=#1e293b;" vertex="1" parent="tier_azure">
+          <mxGeometry x="670" y="60" width="250" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_az_15" value="15" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d97706;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="tier_azure">
+          <mxGeometry x="660" y="50" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Az 16: Key Vault -->
+        <mxCell id="az_16" value="&lt;b&gt;Azure Key Vault &amp;amp; RBAC&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;Zero hardcoded secrets&lt;br/&gt;Least-privilege Managed Identity&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontFamily=Helvetica;fontSize=11;fontColor=#1e293b;" vertex="1" parent="tier_azure">
+          <mxGeometry x="990" y="60" width="260" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_az_16" value="16" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dc2626;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="tier_azure">
+          <mxGeometry x="980" y="50" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Az 17: LangSmith & App Insights -->
+        <mxCell id="az_17" value="&lt;b&gt;LangSmith &amp;amp; App Insights&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;Run Trees &amp;amp; Token Telemetry&lt;br/&gt;Prometheus Drift &amp;amp; Latency Alerts&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Helvetica;fontSize=11;fontColor=#1e293b;" vertex="1" parent="tier_azure">
+          <mxGeometry x="1310" y="60" width="230" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_az_17" value="17" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#7c3aed;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="tier_azure">
+          <mxGeometry x="1300" y="50" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- INTER-TIER CORRIDOR CONNECTORS -->
+        <mxCell id="edge_fe_api" value="HTTP REST Commands &amp;amp; WebSocket Real-time Streaming" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#64748b;strokeWidth=2;fontColor=#475569;fontSize=11;" edge="1" parent="1" source="tier_fe" target="tier_api">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge_api_agents" value="Execute / Resume LangGraph State Machine" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#2563eb;strokeWidth=2;fontColor=#1e293b;fontSize=11;" edge="1" parent="1" source="tier_api" target="tier_agents">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge_agents_azure" value="Managed Identity | Cloud Artifacts | Live LangSmith Traces" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#64748b;strokeWidth=2;fontColor=#475569;fontSize=11;" edge="1" parent="1" source="tier_agents" target="tier_azure">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

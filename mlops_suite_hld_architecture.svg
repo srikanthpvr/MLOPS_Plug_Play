@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1680 1060" width="100%" height="100%">
+  <defs>
+    <style>
+      .tier-box { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1.5; rx: 8; }
+      .tier-header { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: bold; fill: #1e293b; letter-spacing: 0.5px; }
+      .node-card { rx: 8; stroke-width: 1.5; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.04)); }
+      .title-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: bold; fill: #0f172a; }
+      .desc-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; fill: #475569; }
+      .badge-circle { stroke: #ffffff; stroke-width: 2; }
+      .badge-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 10px; font-weight: bold; fill: #ffffff; text-anchor: middle; dominant-baseline: central; }
+      .arrow { stroke: #64748b; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .flow-arrow { stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#64748b" />
+    </marker>
+    <marker id="arrowhead-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#2563eb" />
+    </marker>
+    <marker id="arrowhead-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#059669" />
+    </marker>
+    <marker id="arrowhead-red" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#dc2626" />
+    </marker>
+    <marker id="arrowhead-orange" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#d97706" />
+    </marker>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1680" height="1060" fill="#ffffff" />
+
+  <!-- TIER 1: FRONTEND CONSOLE -->
+  <g id="tier1">
+    <rect x="50" y="30" width="1580" height="185" class="tier-box" />
+    <text x="75" y="58" class="tier-header">TIER 1: MLOPS ENGINEER INTERACTIVE CONSOLE (REACT 19 + TYPESCRIPT + TAILWIND CSS)</text>
+    
+    <!-- 01 Data Hub -->
+    <rect x="80" y="80" width="270" height="95" class="node-card" fill="#dae8fc" stroke="#6c8ebf" />
+    <circle cx="80" cy="80" r="13" class="badge-circle" fill="#2563eb" />
+    <text x="80" y="80" class="badge-text">01</text>
+    <text x="105" y="112" class="title-text">Data Hub &amp; Connector</text>
+    <text x="105" y="132" class="desc-text">Azure Blob, ADLS, DVC, CSV</text>
+    <text x="105" y="148" class="desc-text">Schema &amp; Baseline Drift Profiler</text>
+
+    <!-- 02 Model Lab -->
+    <rect x="390" y="80" width="270" height="95" class="node-card" fill="#dae8fc" stroke="#6c8ebf" />
+    <circle cx="390" cy="80" r="13" class="badge-circle" fill="#2563eb" />
+    <text x="390" y="80" class="badge-text">02</text>
+    <text x="415" y="112" class="title-text">Model Lab &amp; Hyperparameters</text>
+    <text x="415" y="132" class="desc-text">LightGBM, XGBoost, PyTorch</text>
+    <text x="415" y="148" class="desc-text">Interactive Sliders &amp; SLA Config</text>
+
+    <!-- 03 Agent Canvas -->
+    <rect x="700" y="80" width="280" height="95" class="node-card" fill="#d5e8d4" stroke="#82b366" />
+    <circle cx="700" cy="80" r="13" class="badge-circle" fill="#059669" />
+    <text x="700" y="80" class="badge-text">03</text>
+    <text x="725" y="112" class="title-text">Agent Execution Canvas</text>
+    <text x="725" y="132" class="desc-text">Live StateGraph Visualizer</text>
+    <text x="725" y="148" class="desc-text">HITL Deployment Approvals</text>
+
+    <!-- 04 Observability Desk -->
+    <rect x="1020" y="80" width="280" height="95" class="node-card" fill="#ffe6cc" stroke="#d79b00" />
+    <circle cx="1020" cy="80" r="13" class="badge-circle" fill="#d97706" />
+    <text x="1020" y="80" class="badge-text">04</text>
+    <text x="1045" y="112" class="title-text">Observability &amp; Drift Desk</text>
+    <text x="1045" y="132" class="desc-text">Real-time Latency (p50/p95/p99)</text>
+    <text x="1045" y="148" class="desc-text">KS &amp; PSI Drift, One-Click Retrain</text>
+
+    <!-- 05 LangSmith Hub -->
+    <rect x="1340" y="80" width="260" height="95" class="node-card" fill="#e1d5e7" stroke="#9673a6" />
+    <circle cx="1340" cy="80" r="13" class="badge-circle" fill="#7c3aed" />
+    <text x="1340" y="80" class="badge-text">05</text>
+    <text x="1365" y="112" class="title-text">LangSmith Trace Hub</text>
+    <text x="1365" y="132" class="desc-text">Run-level Trace Graphs</text>
+    <text x="1365" y="148" class="desc-text">Prompt &amp; Token Telemetry Deep-Link</text>
+  </g>
+
+  <!-- INTER-TIER CONNECTOR 1 -->
+  <path d="M 840 215 L 840 255" class="arrow" marker-end="url(#arrowhead)" />
+  <rect x="710" y="226" width="260" height="18" fill="#ffffff" rx="4" />
+  <text x="840" y="239" font-family="Helvetica" font-size="11" fill="#475569" text-anchor="middle">HTTP REST Commands &amp; WebSocket Real-time Stream</text>
+
+  <!-- TIER 2: FASTAPI APIS -->
+  <g id="tier2">
+    <rect x="50" y="260" width="1580" height="135" class="tier-box" fill="#f1f5f9" stroke="#94a3b8" />
+    <text x="75" y="288" class="tier-header">TIER 2: PLUG &amp; PLAY BACKEND GATEWAY (FASTAPI + ASYNC ENGINE + WEBSOCKET BUS)</text>
+
+    <rect x="80" y="305" width="1520" height="65" class="node-card" fill="#ffffff" stroke="#64748b" />
+    <circle cx="80" cy="305" r="13" class="badge-circle" fill="#2563eb" />
+    <text x="80" y="305" class="badge-text">06</text>
+    <text x="110" y="333" class="title-text">FastAPI Asynchronous Gateway &amp; Streaming Bus</text>
+    <text x="110" y="353" class="desc-text">REST Controllers (/api/data, /api/models, /api/observability) | WebSocket Real-time Log &amp; State Streamer | Pydantic Schema Contracts</text>
+  </g>
+
+  <!-- INTER-TIER CONNECTOR 2 -->
+  <path d="M 840 395 L 840 435" class="arrow" marker-end="url(#arrowhead-blue)" stroke="#2563eb" />
+  <rect x="720" y="406" width="240" height="18" fill="#ffffff" rx="4" />
+  <text x="840" y="419" font-family="Helvetica" font-size="11" fill="#2563eb" font-weight="bold" text-anchor="middle">Execute / Resume LangGraph State Machine</text>
+
+  <!-- TIER 3: LANGGRAPH MULTI-AGENT BUILD SUITE -->
+  <g id="tier3">
+    <rect x="50" y="440" width="1580" height="310" class="tier-box" />
+    <text x="75" y="468" class="tier-header">TIER 3: AUTONOMOUS MLOPS BUILD AGENT SUITE (LANGGRAPH MULTI-AGENT STATEGRAPH + LANGCHAIN TOOLS)</text>
+
+    <!-- 07 Supervisor -->
+    <rect x="80" y="485" width="1520" height="50" class="node-card" fill="#ffffff" stroke="#2563eb" />
+    <circle cx="80" cy="485" r="13" class="badge-circle" fill="#2563eb" />
+    <text x="80" y="485" class="badge-text">07</text>
+    <text x="110" y="508" class="title-text">07. MLOps Supervisor &amp; StateGraph Engine</text>
+    <text x="110" y="524" class="desc-text">Orchestrates state transitions across subagents, maintains checkpoint history, and pauses at HITL interrupt nodes for human sign-off</text>
+
+    <!-- 08 Data Sentinel -->
+    <rect x="80" y="555" width="270" height="100" class="node-card" fill="#dae8fc" stroke="#6c8ebf" />
+    <circle cx="80" cy="555" r="13" class="badge-circle" fill="#2563eb" />
+    <text x="80" y="555" class="badge-text">08</text>
+    <text x="105" y="587" class="title-text">Data Sentinel Agent</text>
+    <text x="105" y="607" class="desc-text">Schema assertion tests,</text>
+    <text x="105" y="623" class="desc-text">KS-test &amp; PSI drift analysis</text>
+
+    <!-- Flow 08 to 09 -->
+    <path d="M 350 605 L 390 605" class="flow-arrow" stroke="#2563eb" marker-end="url(#arrowhead-blue)" />
+
+    <!-- 09 Training & HP -->
+    <rect x="390" y="555" width="270" height="100" class="node-card" fill="#dae8fc" stroke="#6c8ebf" />
+    <circle cx="390" cy="555" r="13" class="badge-circle" fill="#2563eb" />
+    <text x="390" y="555" class="badge-text">09</text>
+    <text x="415" y="587" class="title-text">Training &amp; HP Agent</text>
+    <text x="415" y="607" class="desc-text">Executes model training,</text>
+    <text x="415" y="623" class="desc-text">Cross-validation &amp; artifact log</text>
+
+    <!-- Flow 09 to 10 -->
+    <path d="M 660 605 L 700 605" class="flow-arrow" stroke="#059669" marker-end="url(#arrowhead-green)" />
+
+    <!-- 10 Eval Gate -->
+    <rect x="700" y="555" width="280" height="100" class="node-card" fill="#d5e8d4" stroke="#82b366" />
+    <circle cx="700" cy="555" r="13" class="badge-circle" fill="#059669" />
+    <text x="700" y="555" class="badge-text">10</text>
+    <text x="725" y="587" class="title-text">Eval Gate Agent</text>
+    <text x="725" y="607" class="desc-text">Challenger vs Champion eval,</text>
+    <text x="725" y="623" class="desc-text">Regression &amp; p95 latency check</text>
+
+    <!-- Flow 10 to 11 -->
+    <path d="M 980 605 L 1020 605" class="flow-arrow" stroke="#dc2626" marker-end="url(#arrowhead-red)" />
+
+    <!-- 11 Security Sentinel -->
+    <rect x="1020" y="555" width="280" height="100" class="node-card" fill="#f8cecc" stroke="#b85450" />
+    <circle cx="1020" cy="555" r="13" class="badge-circle" fill="#dc2626" />
+    <text x="1020" y="555" class="badge-text">11</text>
+    <text x="1045" y="587" class="title-text">AgentShield Sentinel</text>
+    <text x="1045" y="607" class="desc-text">Zero-secret code verification,</text>
+    <text x="1045" y="623" class="desc-text">Key Vault audit &amp; image check</text>
+
+    <!-- Flow 11 to 12 -->
+    <path d="M 1300 605 L 1340 605" class="flow-arrow" stroke="#d97706" marker-end="url(#arrowhead-orange)" />
+
+    <!-- 12 Packager & Deployer -->
+    <rect x="1340" y="555" width="260" height="100" class="node-card" fill="#ffe6cc" stroke="#d79b00" />
+    <circle cx="1340" cy="555" r="13" class="badge-circle" fill="#d97706" />
+    <text x="1340" y="555" class="badge-text">12</text>
+    <text x="1365" y="587" class="title-text">Packager &amp; Deployer</text>
+    <text x="1365" y="607" class="desc-text">ACR Docker Build, Azure ML push,</text>
+    <text x="1365" y="623" class="desc-text">ACA / AKS Blue-Green Switch</text>
+
+    <!-- Checkpointer Banner -->
+    <rect x="80" y="680" width="1520" height="45" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-dasharray="6,4" />
+    <text x="105" y="700" class="title-text" fill="#334155">State Persistence &amp; Interrupt Checkpointing</text>
+    <text x="105" y="716" class="desc-text">Thread ID State tracking, MemorySaver / SQLite checkpointing, and LangGraph interrupt() before Azure deployment</text>
+  </g>
+
+  <!-- INTER-TIER CONNECTOR 3 -->
+  <path d="M 840 750 L 840 790" class="arrow" marker-end="url(#arrowhead)" />
+  <rect x="690" y="761" width="300" height="18" fill="#ffffff" rx="4" />
+  <text x="840" y="774" font-family="Helvetica" font-size="11" fill="#475569" text-anchor="middle">Managed Identity | Cloud Artifacts | Live LangSmith Traces</text>
+
+  <!-- TIER 4: CLOUD & OBSERVABILITY -->
+  <g id="tier4">
+    <rect x="50" y="795" width="1580" height="215" class="tier-box" fill="#f1f5f9" stroke="#94a3b8" />
+    <text x="75" y="825" class="tier-header">TIER 4: MICROSOFT AZURE CLOUD INFRASTRUCTURE &amp; ENTERPRISE OBSERVABILITY FABRIC</text>
+
+    <!-- 13 Azure Storage -->
+    <rect x="80" y="850" width="270" height="120" class="node-card" fill="#dae8fc" stroke="#6c8ebf" />
+    <circle cx="80" cy="850" r="13" class="badge-circle" fill="#2563eb" />
+    <text x="80" y="850" class="badge-text">13</text>
+    <text x="105" y="885" class="title-text">Azure Blob / ADLS Gen2</text>
+    <text x="105" y="905" class="desc-text">DVC Remote Repository</text>
+    <text x="105" y="921" class="desc-text">Dataset Versions &amp; Artifacts</text>
+
+    <!-- 14 Azure OpenAI -->
+    <rect x="390" y="850" width="270" height="120" class="node-card" fill="#d5e8d4" stroke="#82b366" />
+    <circle cx="390" cy="850" r="13" class="badge-circle" fill="#059669" />
+    <text x="390" y="850" class="badge-text">14</text>
+    <text x="415" y="885" class="title-text">Azure OpenAI Service</text>
+    <text x="415" y="905" class="desc-text">Enterprise GPT-4o / mini</text>
+    <text x="415" y="921" class="desc-text">Private VNet &amp; Managed Identity</text>
+
+    <!-- 15 Azure Compute -->
+    <rect x="700" y="850" width="280" height="120" class="node-card" fill="#ffe6cc" stroke="#d79b00" />
+    <circle cx="700" cy="850" r="13" class="badge-circle" fill="#d97706" />
+    <text x="700" y="850" class="badge-text">15</text>
+    <text x="725" y="885" class="title-text">Azure Container Apps / ACR</text>
+    <text x="725" y="905" class="desc-text">Serverless Serving &amp; AKS Pool</text>
+    <text x="725" y="921" class="desc-text">Azure ML Model Registry v2</text>
+
+    <!-- 16 Key Vault -->
+    <rect x="1020" y="850" width="280" height="120" class="node-card" fill="#f8cecc" stroke="#b85450" />
+    <circle cx="1020" cy="850" r="13" class="badge-circle" fill="#dc2626" />
+    <text x="1020" y="850" class="badge-text">16</text>
+    <text x="1045" y="885" class="title-text">Azure Key Vault &amp; RBAC</text>
+    <text x="1045" y="905" class="desc-text">Zero hardcoded secrets</text>
+    <text x="1045" y="921" class="desc-text">Least-privilege Managed Identity</text>
+
+    <!-- 17 LangSmith & App Insights -->
+    <rect x="1340" y="850" width="260" height="120" class="node-card" fill="#e1d5e7" stroke="#9673a6" />
+    <circle cx="1340" cy="850" r="13" class="badge-circle" fill="#7c3aed" />
+    <text x="1340" y="850" class="badge-text">17</text>
+    <text x="1365" y="885" class="title-text">LangSmith &amp; App Insights</text>
+    <text x="1365" y="905" class="desc-text">Run Trees &amp; Token Telemetry</text>
+    <text x="1365" y="921" class="desc-text">Prometheus Drift &amp; Latency Alerts</text>
+  </g>
+</svg>
