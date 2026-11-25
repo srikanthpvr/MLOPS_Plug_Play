@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1720 1080" width="100%" height="100%">
+  <defs>
+    <style>
+      .pillar-problem { fill: #fef2f2; stroke: #f87171; stroke-width: 1.5; rx: 8; }
+      .pillar-solution { fill: #eff6ff; stroke: #93c5fd; stroke-width: 1.5; rx: 8; }
+      .pillar-delivery { fill: #f0fdf4; stroke: #86efac; stroke-width: 1.5; rx: 8; }
+      .header-problem { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 13px; font-weight: bold; fill: #991b1b; letter-spacing: 0.5px; }
+      .header-solution { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 13px; font-weight: bold; fill: #1e40af; letter-spacing: 0.5px; }
+      .header-delivery { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 13px; font-weight: bold; fill: #166534; letter-spacing: 0.5px; }
+      .card-box { rx: 8; stroke-width: 1.5; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.03)); }
+      .title-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 13px; font-weight: bold; fill: #0f172a; }
+      .desc-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; fill: #475569; }
+      .badge-circle { stroke: #ffffff; stroke-width: 2; }
+      .badge-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10px; font-weight: bold; fill: #ffffff; text-anchor: middle; dominant-baseline: central; }
+      .arrow-red { stroke: #dc2626; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .arrow-green { stroke: #059669; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+    <marker id="m-red" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#dc2626" />
+    </marker>
+    <marker id="m-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#059669" />
+    </marker>
+  </defs>
+
+  <rect width="1720" height="1080" fill="#ffffff" />
+
+  <!-- COLUMN 1: THE PROBLEM STATEMENT -->
+  <g id="col1">
+    <rect x="40" y="30" width="500" height="1020" class="pillar-problem" />
+    <text x="65" y="60" class="header-problem">1. THE CURRENT PROBLEM: THE $100B AI TRAGEDY</text>
+
+    <!-- Stat banner -->
+    <rect x="65" y="80" width="450" height="70" rx="8" fill="#ffffff" stroke="#fca5a5" stroke-width="1.5" />
+    <text x="85" y="108" font-family="Segoe UI, sans-serif" font-size="15px" font-weight="bold" fill="#dc2626">87% of Enterprise AI Models DIE</text>
+    <text x="85" y="130" font-family="Segoe UI, sans-serif" font-size="11px" fill="#7f1d1d">Billions invested in data science, yet only 13% ever reach live production.</text>
+
+    <!-- 01 Silent Drift -->
+    <rect x="65" y="175" width="450" height="95" class="card-box" fill="#f8cecc" stroke="#b85450" />
+    <circle cx="65" cy="175" r="13" class="badge-circle" fill="#dc2626" />
+    <text x="65" y="175" class="badge-text">01</text>
+    <text x="95" y="205" class="title-text">Silent Covariate Drift &amp; Accuracy Decay</text>
+    <text x="95" y="225" class="desc-text">Live customer behavior shifts, causing model accuracy to decay</text>
+    <text x="95" y="242" class="desc-text">silently. Teams only discover failures weeks late after revenue loss.</text>
+
+    <!-- 02 Notebook to Prod -->
+    <rect x="65" y="295" width="450" height="95" class="card-box" fill="#f8cecc" stroke="#b85450" />
+    <circle cx="65" cy="295" r="13" class="badge-circle" fill="#dc2626" />
+    <text x="65" y="295" class="badge-text">02</text>
+    <text x="95" y="325" class="title-text">Notebook-to-Production Chasm</text>
+    <text x="95" y="345" class="desc-text">Data scientists write code in Jupyter. Productionizing takes 4 to 8 weeks</text>
+    <text x="95" y="362" class="desc-text">of manual rewriting, Dockerfile debugging, and dependency hell.</text>
+
+    <!-- 03 Tooling Fragmentation -->
+    <rect x="65" y="415" width="450" height="95" class="card-box" fill="#f8cecc" stroke="#b85450" />
+    <circle cx="65" cy="415" r="13" class="badge-circle" fill="#dc2626" />
+    <text x="65" y="415" class="badge-text">03</text>
+    <text x="95" y="445" class="title-text">Fragile Tooling Fragmentation</text>
+    <text x="95" y="465" class="desc-text">Engineers juggle 7 disconnected systems (Grafana, DVC, CLI, Azure,</text>
+    <text x="95" y="482" class="desc-text">MLflow, Git). Zero single source of truth or automated feedback loop.</text>
+
+    <!-- 04 Zero Gating -->
+    <rect x="65" y="535" width="450" height="95" class="card-box" fill="#f8cecc" stroke="#b85450" />
+    <circle cx="65" cy="535" r="13" class="badge-circle" fill="#dc2626" />
+    <text x="65" y="535" class="badge-text">04</text>
+    <text x="95" y="565" class="title-text">Zero Latency Gating &amp; Secret Leaks</text>
+    <text x="95" y="585" class="desc-text">Inferior models get promoted without p95 latency checks. Storage</text>
+    <text x="95" y="602" class="desc-text">credentials and API keys leak inside Docker container images.</text>
+  </g>
+
+  <!-- CONNECTOR 1 TO 2 -->
+  <path d="M 540 540 L 590 540" class="arrow-red" marker-end="url(#m-red)" />
+  <rect x="545" y="505" width="100" height="20" rx="4" fill="#ffffff" stroke="#dc2626" stroke-width="1" />
+  <text x="595" y="519" font-family="Segoe UI, sans-serif" font-size="10px" font-weight="bold" fill="#dc2626" text-anchor="middle">Solved By</text>
+
+  <!-- COLUMN 2: HOW WE ARE SOLVING IT -->
+  <g id="col2">
+    <rect x="600" y="30" width="520" height="1020" class="pillar-solution" />
+    <text x="625" y="60" class="header-solution">2. HOW WE SOLVE IT: AUTONOMOUS MULTI-AGENT STATEGRAPH</text>
+
+    <!-- Banner -->
+    <rect x="625" y="80" width="470" height="70" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5" />
+    <text x="645" y="108" font-family="Segoe UI, sans-serif" font-size="14px" font-weight="bold" fill="#2563eb">Plug &amp; Play Multi-Agent State Machine</text>
+    <text x="645" y="130" font-family="Segoe UI, sans-serif" font-size="11px" fill="#1e3a8a">LangGraph State Coordination | LangSmith Telemetry | Azure Cloud Runtime</text>
+
+    <!-- 05 Data Sentinel -->
+    <rect x="625" y="175" width="470" height="85" class="card-box" fill="#dae8fc" stroke="#6c8ebf" />
+    <circle cx="625" cy="175" r="13" class="badge-circle" fill="#2563eb" />
+    <text x="625" y="175" class="badge-text">05</text>
+    <text x="655" y="205" class="title-text">Data Sentinel Agent (Drift Firewall)</text>
+    <text x="655" y="225" class="desc-text">Automated 2-sample KS-test &amp; Laplace-smoothed 10-bin PSI math.</text>
+    <text x="655" y="241" class="desc-text">Catches dirty data &amp; schema errors before training.</text>
+
+    <!-- 06 Training Agent -->
+    <rect x="625" y="280" width="470" height="85" class="card-box" fill="#dae8fc" stroke="#6c8ebf" />
+    <circle cx="625" cy="280" r="13" class="badge-circle" fill="#2563eb" />
+    <text x="625" y="280" class="badge-text">06</text>
+    <text x="655" y="310" class="title-text">Training &amp; Hyperparameter Agent</text>
+    <text x="655" y="330" class="desc-text">Trains LightGBM, XGBoost, PyTorch with stratified cross-validation,</text>
+    <text x="655" y="346" class="desc-text">parameter bounding, and multi-format export (.pkl/.onnx).</text>
+
+    <!-- 07 Eval Gate -->
+    <rect x="625" y="385" width="470" height="85" class="card-box" fill="#d5e8d4" stroke="#82b366" />
+    <circle cx="625" cy="385" r="13" class="badge-circle" fill="#059669" />
+    <text x="625" y="385" class="badge-text">07</text>
+    <text x="655" y="415" class="title-text">Evaluation Gate Agent (Champion vs Challenger)</text>
+    <text x="655" y="435" class="desc-text">Automated regression firewall: requires F1(cand) &gt;= F1(champ) and</text>
+    <text x="655" y="451" class="desc-text">benchmarks 150 batch inferences against strict p95 latency budget.</text>
+
+    <!-- 08 Security Sentinel -->
+    <rect x="625" y="490" width="470" height="85" class="card-box" fill="#f8cecc" stroke="#b85450" />
+    <circle cx="625" cy="490" r="13" class="badge-circle" fill="#dc2626" />
+    <text x="625" y="490" class="badge-text">08</text>
+    <text x="655" y="520" class="title-text">AgentShield Security Sentinel</text>
+    <text x="655" y="540" class="desc-text">Static entropy &amp; regex scanner audits code for zero exposed secrets.</text>
+    <text x="655" y="556" class="desc-text">Mandates Azure Managed Identity &amp; non-root Docker user.</text>
+
+    <!-- 09 HITL Checkpoint -->
+    <rect x="625" y="595" width="470" height="85" class="card-box" fill="#ffe6cc" stroke="#d79b00" />
+    <circle cx="625" cy="595" r="13" class="badge-circle" fill="#d97706" />
+    <text x="625" y="595" class="badge-text">09</text>
+    <text x="655" y="625" class="title-text">Human-in-the-Loop (HITL) Checkpoint</text>
+    <text x="655" y="645" class="desc-text">LangGraph halts automatically before production deployment.</text>
+    <text x="655" y="661" class="desc-text">Lead engineer reviews candidate F1 and latency before 1-click signoff.</text>
+
+    <!-- 10 Packager -->
+    <rect x="625" y="700" width="470" height="85" class="card-box" fill="#e1d5e7" stroke="#9673a6" />
+    <circle cx="625" cy="700" r="13" class="badge-circle" fill="#7c3aed" />
+    <text x="625" y="700" class="badge-text">10</text>
+    <text x="655" y="730" class="title-text">Packager &amp; Deployer (Azure Container Apps)</text>
+    <text x="655" y="750" class="desc-text">Autonomously scaffolds FastAPI Lifespan app, builds ACR image,</text>
+    <text x="655" y="766" class="desc-text">and executes 100% Blue-Green traffic switch in Azure.</text>
+  </g>
+
+  <!-- CONNECTOR 2 TO 3 -->
+  <path d="M 1120 540 L 1170 540" class="arrow-green" marker-end="url(#m-green)" />
+  <rect x="1125" y="505" width="100" height="20" rx="4" fill="#ffffff" stroke="#059669" stroke-width="1" />
+  <text x="1175" y="519" font-family="Segoe UI, sans-serif" font-size="10px" font-weight="bold" fill="#059669" text-anchor="middle">Delivers Value</text>
+
+  <!-- COLUMN 3: WHAT WE ARE DELIVERING -->
+  <g id="col3">
+    <rect x="1180" y="30" width="500" height="1020" class="pillar-delivery" />
+    <text x="1205" y="60" class="header-delivery">3. WHAT WE ARE DELIVERING: PLUG &amp; PLAY ARTIFACTS</text>
+
+    <!-- Delivery Banner -->
+    <rect x="1205" y="80" width="450" height="70" rx="8" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.5" />
+    <text x="1225" y="108" font-family="Segoe UI, sans-serif" font-size="14px" font-weight="bold" fill="#059669">Enterprise Open Source &amp; SaaS Ready</text>
+    <text x="1225" y="130" font-family="Segoe UI, sans-serif" font-size="11px" fill="#065f46">GitHub Repository: github.com/srikanthpvr/MLOPS_Plug_Play</text>
+
+    <!-- 11 React Cockpit -->
+    <rect x="1205" y="175" width="450" height="95" class="card-box" fill="#d5e8d4" stroke="#82b366" />
+    <circle cx="1205" cy="175" r="13" class="badge-circle" fill="#059669" />
+    <text x="1205" y="175" class="badge-text">11</text>
+    <text x="1235" y="205" class="title-text">Unified React 19 Operations Cockpit</text>
+    <text x="1235" y="225" class="desc-text">TypeScript + Tailwind CSS console uniting Data Hub, Model Lab,</text>
+    <text x="1235" y="242" class="desc-text">LangGraph Agent Canvas, and Observability Desk into 1 cockpit.</text>
+
+    <!-- 12 6 Skill Bundles -->
+    <rect x="1205" y="290" width="450" height="95" class="card-box" fill="#e1d5e7" stroke="#9673a6" />
+    <circle cx="1205" cy="290" r="13" class="badge-circle" fill="#7c3aed" />
+    <text x="1205" y="290" class="badge-text">12</text>
+    <text x="1235" y="320" class="title-text">6 Production Agent Skill Bundles</text>
+    <text x="1235" y="340" class="desc-text">Zero hallucinations: each agent features a master SKILL.md,</text>
+    <text x="1235" y="357" class="desc-text">standalone Python script, and mathematical reference guide.</text>
+
+    <!-- 13 Observability -->
+    <rect x="1205" y="405" width="450" height="95" class="card-box" fill="#ffe6cc" stroke="#d79b00" />
+    <circle cx="1205" cy="405" r="13" class="badge-circle" fill="#d97706" />
+    <text x="1205" y="405" class="badge-text">13</text>
+    <text x="1235" y="435" class="title-text">Continuous Drift &amp; LangSmith Observability</text>
+    <text x="1235" y="455" class="desc-text">Real-time p50/p95/p99 latency charts, feature drift alerts, 1-click</text>
+    <text x="1235" y="472" class="desc-text">retraining action, and prompt tree telemetry in LangSmith.</text>
+
+    <!-- 14 60 Second Time to Prod -->
+    <rect x="1205" y="520" width="450" height="95" class="card-box" fill="#d5e8d4" stroke="#82b366" />
+    <circle cx="1205" cy="520" r="13" class="badge-circle" fill="#059669" />
+    <text x="1205" y="520" class="badge-text">14</text>
+    <text x="1235" y="550" class="title-text">10x Speedup: 6 Weeks to 60 Seconds</text>
+    <text x="1235" y="570" class="desc-text">One-click launcher (run_mlops_platform.bat). Runs locally with</text>
+    <text x="1235" y="587" class="desc-text">zero cloud dependencies or connects to Microsoft Azure in 30 seconds.</text>
+
+    <!-- 15 The Shark Tank Ask -->
+    <rect x="1205" y="635" width="450" height="95" class="card-box" fill="#dae8fc" stroke="#6c8ebf" />
+    <circle cx="1205" cy="635" r="13" class="badge-circle" fill="#2563eb" />
+    <text x="1205" y="635" class="badge-text">15</text>
+    <text x="1235" y="665" class="title-text">The Shark Tank Investment Proposition</text>
+    <text x="1235" y="685" class="desc-text">$15.4B Exploding TAM | Enterprise SaaS ($10k/mo per org) |</text>
+    <text x="1235" y="702" class="desc-text">100% Built, Verified &amp; Open on GitHub: Seeking $1M for 10% Equity.</text>
+  </g>
+</svg>

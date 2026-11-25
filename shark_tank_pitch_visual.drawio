@@ -1,0 +1,172 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="shark-tank-pitch" name="Shark-Tank-Pitch-Visual">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- COLUMN 1: THE CURRENT PROBLEM STATEMENT -->
+        <mxCell id="col_problem" value="1. THE CURRENT PROBLEM STATEMENT: THE $100B AI CRISIS" style="swimlane;html=1;startSize=32;rounded=1;arcSize=6;fillColor=#fef2f2;strokeColor=#f87171;fontFamily=Helvetica;fontSize=13;fontStyle=1;fontColor=#991b1b;" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="480" height="980" as="geometry"/>
+        </mxCell>
+
+        <!-- Stat Card -->
+        <mxCell id="card_stat" value="&lt;b style='font-size:15px;color:#dc2626;'&gt;87% of Enterprise AI Models DIE&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#7f1d1d;'&gt;Billions invested in data science teams, yet only 13% ever reach continuous production deployment.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#fca5a5;fontFamily=Helvetica;fontSize=12;arcSize=8;" vertex="1" parent="col_problem">
+          <mxGeometry x="30" y="50" width="420" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Prob 01: Silent Covariate Drift -->
+        <mxCell id="p_01" value="&lt;b&gt;Silent Covariate Drift &amp;amp; Decay&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#64748b;'&gt;Live customer behavior shifts, causing accuracy to collapse silently. Engineering teams only discover decay weeks late after revenue loss.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=8;" vertex="1" parent="col_problem">
+          <mxGeometry x="30" y="150" width="420" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_p_01" value="01" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dc2626;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="col_problem">
+          <mxGeometry x="20" y="140" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Prob 02: Notebook to Prod Chasm -->
+        <mxCell id="p_02" value="&lt;b&gt;Notebook-to-Production Chasm&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#64748b;'&gt;Data scientists build models in Jupyter Notebooks. Productionizing takes 4 to 8 weeks of manual rewriting, Dockerfile debugging, and dependency hell.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=8;" vertex="1" parent="col_problem">
+          <mxGeometry x="30" y="280" width="420" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_p_02" value="02" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dc2626;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="col_problem">
+          <mxGeometry x="20" y="270" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Prob 03: Fragile Tooling Fragmentation -->
+        <mxCell id="p_03" value="&lt;b&gt;Fragile Tooling Fragmentation&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#64748b;'&gt;Engineers juggle 7 disconnected systems (Grafana, DVC, terminal logs, Azure Portal, MLflow, Git). Zero single source of truth.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=8;" vertex="1" parent="col_problem">
+          <mxGeometry x="30" y="410" width="420" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_p_03" value="03" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dc2626;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="col_problem">
+          <mxGeometry x="20" y="400" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Prob 04: Zero Automated Gating & Security Leaks -->
+        <mxCell id="p_04" value="&lt;b&gt;Zero Quality Gating &amp;amp; Security Risks&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#64748b;'&gt;Inferior models get promoted without p95 latency checks. Credentials and storage connection strings leak inside container images.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=8;" vertex="1" parent="col_problem">
+          <mxGeometry x="30" y="540" width="420" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_p_04" value="04" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dc2626;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="col_problem">
+          <mxGeometry x="20" y="530" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+
+        <!-- COLUMN 2: HOW WE ARE SOLVING IT -->
+        <mxCell id="col_solution" value="2. HOW WE ARE SOLVING IT: AUTONOMOUS MULTI-AGENT STATEGRAPH" style="swimlane;html=1;startSize=32;rounded=1;arcSize=6;fillColor=#eff6ff;strokeColor=#93c5fd;fontFamily=Helvetica;fontSize=13;fontStyle=1;fontColor=#1e40af;" vertex="1" parent="1">
+          <mxGeometry x="580" y="50" width="530" height="980" as="geometry"/>
+        </mxCell>
+
+        <!-- Solution Banner -->
+        <mxCell id="card_sol_banner" value="&lt;b style='font-size:14px;color:#2563eb;'&gt;Plug &amp;amp; Play Multi-Agent State Machine&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#1e3a8a;'&gt;LangGraph State Coordination | LangSmith Telemetry | Azure Cloud Runtime&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#bfdbfe;fontFamily=Helvetica;fontSize=12;arcSize=8;" vertex="1" parent="col_solution">
+          <mxGeometry x="30" y="50" width="470" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Sol 05: Data Sentinel -->
+        <mxCell id="s_05" value="&lt;b&gt;Data Sentinel Agent (Drift Firewall)&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;Automated 2-sample Kolmogorov-Smirnov test &amp;amp; Laplace-smoothed 10-bin Population Stability Index (PSI). Detects dirty data before training.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=8;" vertex="1" parent="col_solution">
+          <mxGeometry x="30" y="150" width="470" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_s_05" value="05" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2563eb;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="col_solution">
+          <mxGeometry x="20" y="140" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Sol 06: Training & HP Agent -->
+        <mxCell id="s_06" value="&lt;b&gt;Training &amp;amp; Hyperparameter Agent&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;Trains candidate models (LightGBM, XGBoost, PyTorch) with stratified cross-validation, parameter bounding, and instant serialization (.pkl/.onnx).&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=8;" vertex="1" parent="col_solution">
+          <mxGeometry x="30" y="260" width="470" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_s_06" value="06" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2563eb;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="col_solution">
+          <mxGeometry x="20" y="250" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Sol 07: Eval Gate Agent -->
+        <mxCell id="s_07" value="&lt;b&gt;Evaluation Gate Agent (Champion vs Challenger)&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;Automated regression firewall: requires F1(cand) &gt;= F1(champ) and benchmarks 150 batch inferences against strict p95 latency budget.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=8;" vertex="1" parent="col_solution">
+          <mxGeometry x="30" y="370" width="470" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_s_07" value="07" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#059669;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="col_solution">
+          <mxGeometry x="20" y="360" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Sol 08: AgentShield Security Sentinel -->
+        <mxCell id="s_08" value="&lt;b&gt;AgentShield Security Sentinel&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;Static Shannon entropy &amp;amp; regex scanner audits code for zero exposed secrets. Mandates Azure Managed Identity &amp;amp; non-root Docker user.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=8;" vertex="1" parent="col_solution">
+          <mxGeometry x="30" y="480" width="470" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_s_08" value="08" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dc2626;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="col_solution">
+          <mxGeometry x="20" y="470" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Sol 09: Human-in-the-Loop Sovereign Gate -->
+        <mxCell id="s_09" value="&lt;b&gt;Human-in-the-Loop (HITL) Checkpoint&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;LangGraph StateGraph halts before production rollout. Lead engineer reviews candidate metrics &amp;amp; security pass before signing off.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=8;" vertex="1" parent="col_solution">
+          <mxGeometry x="30" y="590" width="470" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_s_09" value="09" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d97706;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="col_solution">
+          <mxGeometry x="20" y="580" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Sol 10: Packager & Cloud Deployer -->
+        <mxCell id="s_10" value="&lt;b&gt;Packager &amp;amp; Deployer (Azure Container Apps)&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;Autonomously scaffolds FastAPI Lifespan code, builds ACR container image, and executes 100% Blue-Green traffic switch in Azure.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=8;" vertex="1" parent="col_solution">
+          <mxGeometry x="30" y="700" width="470" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_s_10" value="10" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#7c3aed;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="col_solution">
+          <mxGeometry x="20" y="690" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+
+        <!-- COLUMN 3: WHAT WE ARE DELIVERING -->
+        <mxCell id="col_delivery" value="3. WHAT WE ARE DELIVERING: PLUG &amp;amp; PLAY VALUE ARTIFACTS" style="swimlane;html=1;startSize=32;rounded=1;arcSize=6;fillColor=#f0fdf4;strokeColor=#86efac;fontFamily=Helvetica;fontSize=13;fontStyle=1;fontColor=#166534;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="50" width="490" height="980" as="geometry"/>
+        </mxCell>
+
+        <!-- Delivery Banner -->
+        <mxCell id="card_del_banner" value="&lt;b style='font-size:14px;color:#059669;'&gt;Enterprise-Grade Open Source Repository&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#065f46;'&gt;Live on GitHub: github.com/srikanthpvr/MLOPS_Plug_Play&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7f3d0;fontFamily=Helvetica;fontSize=12;arcSize=8;" vertex="1" parent="col_delivery">
+          <mxGeometry x="30" y="50" width="430" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Del 11: React Cockpit -->
+        <mxCell id="d_11" value="&lt;b&gt;Unified React 19 Operations Cockpit&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;TypeScript &amp;amp; Tailwind CSS console uniting Data Hub, Model Lab, LangGraph Visual Canvas, and Observability Desk into 1 cockpit.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=8;" vertex="1" parent="col_delivery">
+          <mxGeometry x="30" y="150" width="430" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_d_11" value="11" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#059669;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="col_delivery">
+          <mxGeometry x="20" y="140" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Del 12: 6 Agent Skill Bundles -->
+        <mxCell id="d_12" value="&lt;b&gt;6 Production Agent Skill Bundles&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;Zero hallucinations or code breaks: each agent features a master SKILL.md, standalone Python script, and mathematical reference guide.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=8;" vertex="1" parent="col_delivery">
+          <mxGeometry x="30" y="275" width="430" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_d_12" value="12" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#7c3aed;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="col_delivery">
+          <mxGeometry x="20" y="265" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Del 13: Observability & LangSmith Hub -->
+        <mxCell id="d_13" value="&lt;b&gt;Continuous Drift &amp;amp; LangSmith Observability&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;Real-time p50/p95/p99 latency distributions, feature drift alerts, 1-click retrain action, and full prompt tree telemetry in LangSmith.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=8;" vertex="1" parent="col_delivery">
+          <mxGeometry x="30" y="400" width="430" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_d_13" value="13" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d97706;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="col_delivery">
+          <mxGeometry x="20" y="390" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Del 14: 60-Second Time to Production -->
+        <mxCell id="d_14" value="&lt;b&gt;10x Speedup: 6 Weeks to 60 Seconds&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;One-click launcher (run_mlops_platform.bat). Runs locally with zero cloud dependencies or connects to Microsoft Azure in 30 seconds.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=8;" vertex="1" parent="col_delivery">
+          <mxGeometry x="30" y="525" width="430" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_d_14" value="14" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#059669;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="col_delivery">
+          <mxGeometry x="20" y="515" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- Del 15: The Shark Tank Value Proposition -->
+        <mxCell id="d_15" value="&lt;b&gt;The Shark Tank Investment Proposition&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:11px;color:#475569;'&gt;$15.4B Exploding TAM | Enterprise SaaS ($10k/mo per org) | Fully Tested &amp;amp; Verified: 5/5 Automated Tests Passing.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Helvetica;fontSize=12;fontColor=#1e293b;arcSize=8;" vertex="1" parent="col_delivery">
+          <mxGeometry x="30" y="650" width="430" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_d_15" value="15" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2563eb;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontStyle=1;fontSize=10;align=center;verticalAlign=middle;" vertex="1" parent="col_delivery">
+          <mxGeometry x="20" y="640" width="24" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- INTER-COLUMN CONNECTORS (ORTHOGONAL HIGHWAYS) -->
+        <mxCell id="conn_prob_sol" value="Solved By Multi-Agent System" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#dc2626;strokeWidth=2.5;fontColor=#991b1b;fontSize=11;fontStyle=1;" edge="1" parent="1" source="col_problem" target="col_solution">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="conn_sol_del" value="Delivers Production Value" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#059669;strokeWidth=2.5;fontColor=#166534;fontSize=11;fontStyle=1;" edge="1" parent="1" source="col_solution" target="col_delivery">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
